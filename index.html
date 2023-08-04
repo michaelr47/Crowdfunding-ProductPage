@@ -10,15 +10,32 @@
 </head>
 <body>
   <header>
-    <img clas="headerLogo" src="./images/logo.svg" alt="image of logo">
-    <nav id="nav">
+    <!-- <picture>
+      <source media="(max-width: 800px)" srcset="./images/image-hero-desktop.jpg">
+      <img src="./images/image-hero-mobile.jpg" alt="image of mobile hero">
+    </picture> -->
+    <div>
+      <img class="headerLogo" src="./images/logo.svg" alt="image of logo">
+    </div>
+    <nav>
       <ul class="navList">
-        <li class="nav-items">About</li>
-        <li class="nav-items">Discover</li>
-        <li class="nav-items">Get Started</li>
+        <li class="nav-items">
+          <a href="#">About</a>
+        </li>
+        <li class="nav-items">
+          <a href="#">Discover</a>
+        </li>
+        <li class="nav-items">
+          <a href="#">Get Started</a>
+        </li>
       </ul>
     </nav>
+
+    <div>
+      <img class="hamburger" src="./images/icon-hamburger.svg" alt="hamburger menu icon" width="20" height="20">
+    </div>
   </header>
+  <main>
   Mastercraft Bamboo Monitor Riser
   A beautiful & handcrafted monitor stand to reduce neck and eye strain.
 
@@ -114,5 +131,6 @@
   Got it!
 
   <!-- Success modal end -->
+</main>
 </body>
 </html>

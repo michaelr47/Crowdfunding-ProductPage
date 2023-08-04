@@ -29,6 +29,8 @@ The designs were created to the following widths:
 
 - Family: [Commissioner](https://fonts.google.com/specimen/Commissioner)
 - Weights: 400, 500, 700 */
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap');
+
 
 * {
     margin: 0;
@@ -36,13 +38,52 @@ The designs were created to the following widths:
     box-sizing: border-box;
 }
 
+body,html {
+    min-height: 100vh;
+    font-family: 'Commissioner', sans-serif;
+}
 header {
     height: 50vh;
     background-color: black;
     color: white;
+    padding: 2rem 10px;
+    display: flex;
+    justify-content: space-around;
 }
 
+.headerLogo {
+    align-self: flex-start;
+    width: 125px;
+    object-fit: contain;
+}
 
+nav {
+   padding: 1rem; 
+   width: 100%;
+   margin-right: 6rem;
+   margin-top: 2rem;
+}
+.navList {
+    width: 100%;
+    list-style-type: none;
+    height: 100%;
+    background-color: white;
+    /* padding: 1rem 1rem; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.nav-items {
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    padding: 10px 1rem;
+    width: 100%;
+}
+.nav-items a {
+    color: black;
+    text-decoration: none;
+    
+}
 
 
 
