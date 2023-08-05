@@ -44,30 +44,45 @@ body,html {
 }
 header {
     height: 50vh;
-    background-color: black;
+    background-color: coral;
     color: white;
     padding: 2rem 10px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    position: relative;
 }
 
 .headerLogo {
     align-self: flex-start;
-    width: 125px;
+    width: 120px;
     object-fit: contain;
+    margin-left: 1rem;
 }
 
-nav {
-   padding: 1rem; 
-   width: 100%;
-   margin-right: 6rem;
-   margin-top: 2rem;
+.hamburger-div {
+    
+    margin-right: 1rem;
 }
+nav {
+   background-color: red;
+   position: absolute;
+   top: 25%;
+   left: 30%;
+
+   width: 150px;
+   
+   z-index: 1;
+   border-radius: 10px;
+   box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+}
+
 .navList {
     width: 100%;
     list-style-type: none;
     height: 100%;
     background-color: white;
+   
+    /* width: 100%; */
     /* padding: 1rem 1rem; */
     display: flex;
     flex-direction: column;
@@ -76,13 +91,14 @@ nav {
 
 .nav-items {
     border-bottom: 1px solid rgba(0, 0, 0, .1);
-    padding: 10px 1rem;
-    width: 100%;
+    padding: 1rem 1rem;
+    /* width: 100%; */
+
 }
 .nav-items a {
     color: black;
     text-decoration: none;
-    
+
 }
 
 
