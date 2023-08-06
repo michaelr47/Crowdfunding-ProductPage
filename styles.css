@@ -50,6 +50,10 @@ header {
     display: flex;
     justify-content: space-between;
     position: relative;
+    background-image: url('./images/image-hero-mobile.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
 }
 
 .headerLogo {
@@ -74,6 +78,7 @@ nav {
    z-index: 1;
    border-radius: 10px;
    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+   display: none;
 }
 
 .navList {
