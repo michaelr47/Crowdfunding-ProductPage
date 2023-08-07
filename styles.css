@@ -98,6 +98,16 @@ nav {
     text-decoration: none;
 }
 
+.bookmarkSection {
+    text-align: center;
+    /* width: 75vw; */
+    margin: 0 auto;
+    border: .5px solid rgba(0,0,0, .1);
+    border-radius: 10px;
+    margin: 10px;
+
+
+}
 
 
 
@@ -106,7 +116,3 @@ nav {
 
 
 
-
-/* @media screen {
-    
-} */
