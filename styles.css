@@ -42,39 +42,36 @@ body,html {
     min-height: 100vh;
     font-family: 'Commissioner', sans-serif;
 }
+
 header {
     height: 50vh;
     background-color: coral;
     color: white;
-    padding: 2rem 10px;
+    padding: 1rem 10px;
+    position: relative;
     display: flex;
     justify-content: space-between;
-    position: relative;
     background-image: url('./images/image-hero-mobile.jpg');
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center; 
     background-size: cover;
+    object-fit: contain;
 }
 
 .headerLogo {
     align-self: flex-start;
-    width: 120px;
+    width: 135px;
     object-fit: contain;
     margin-left: 1rem;
 }
 
-.hamburger-div {
-    
-    margin-right: 1rem;
-}
+.hamburger-div { margin-right: 1rem; }
+
 nav {
-   background-color: red;
    position: absolute;
    top: 25%;
    left: 30%;
-
-   width: 150px;
-   
+   width: 150px; 
    z-index: 1;
    border-radius: 10px;
    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
@@ -84,11 +81,7 @@ nav {
 .navList {
     width: 100%;
     list-style-type: none;
-    height: 100%;
     background-color: white;
-   
-    /* width: 100%; */
-    /* padding: 1rem 1rem; */
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -103,7 +96,6 @@ nav {
 .nav-items a {
     color: black;
     text-decoration: none;
-
 }
 
 
@@ -111,3 +103,10 @@ nav {
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
+
+
+
+
+/* @media screen {
+    
+} */
