@@ -58,6 +58,10 @@ header {
     object-fit: contain;
 }
 
+main {
+    position: relative;
+}
+
 .headerLogo {
     align-self: flex-start;
     width: 135px;
@@ -99,11 +103,17 @@ nav {
 }
 
 .bookmarkSection {
+    position: absolute;
+    top: -120px;
+}
+
+.innerBookmarkSection {
     text-align: center;
     border: 1px solid rgba(0,0,0, .1);
     border-radius: 10px;
     margin: 1.5rem;
-    padding: 2rem;
+    padding: 1rem;
+    background-color: white;;
     position: relative;
 }
 
@@ -111,6 +121,10 @@ nav {
     position: absolute;
     top: -30px;
     left: 45%;
+}
+
+.product-name, .product-description, .backProject {
+    margin: 1.2rem;
 }
 
 
