@@ -65,9 +65,8 @@ header {
 
 main {
     position: relative;
-    width: 100%;
-    /* display: flex;
-     */
+    /* width: 100%; */
+     
 }
 
 .headerLogo {
@@ -111,10 +110,15 @@ nav {
 }
 
 .bookmarkSection {
-    position: absolute;
-    top: -100px; 
-    /* left: 33%; */
-    /* margin: 0 auto; */
+    /* position: absolute;
+    top: -110px;  */
+    /* left: 50%; */
+     /* transform: translate(50%, 50%); */
+     
+    /* ignore above css, tried centering with absolute position */
+
+    max-width: 775px;
+    margin: 0 auto;
 }
 
 .innerBookmarkSection {
