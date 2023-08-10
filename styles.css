@@ -108,13 +108,13 @@ nav {
     color: black;
     text-decoration: none;
 }
-
-.bookmarkSection {
+/* start of main */
+.bookmarkSection, .backedStatus {
     /* position: absolute;
     top: -110px;  */
     /* left: 50%; */
      /* transform: translate(50%, 50%); */
-     
+
     /* ignore above css, tried centering with absolute position */
 
     max-width: 775px;
@@ -127,7 +127,7 @@ nav {
     border-radius: 10px;
     margin: 1.5rem;
     padding: 1rem;
-    background-color: white;;
+    background-color: white;
     position: relative;
 }
 
@@ -156,10 +156,19 @@ nav {
     font-weight: 700;
 }
 
-.bookmarkImg:hover {
+.bookmarkImg:hover, .backProject-Btn:hover {
     cursor: pointer;
 }
 
+.innerBackedStatus {
+    max-width: 775px;
+    text-align: center;
+    border: 1px solid rgba(0,0,0, .1);
+    border-radius: 10px;
+    margin: 1.5rem;
+    padding: 1rem;
+    background-color: white;
+ }
 
 
 .attribution { font-size: 11px; text-align: center; }
