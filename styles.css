@@ -109,17 +109,20 @@ nav {
     text-decoration: none;
 }
 /* start of main */
-.bookmarkSection, .backedStatus {
+
+.widthAndCentered {
+    max-width: 775px;
+    margin: 0 auto;
+}
+
+/* .bookmarkSection { */
     /* position: absolute;
     top: -110px;  */
     /* left: 50%; */
      /* transform: translate(50%, 50%); */
 
     /* ignore above css, tried centering with absolute position */
-
-    max-width: 775px;
-    margin: 0 auto;
-}
+/* } */
 
 .innerBookmarkSection {
     text-align: center;
@@ -161,7 +164,6 @@ nav {
 }
 
 .innerBackedStatus {
-    max-width: 775px;
     text-align: center;
     border: 1px solid rgba(0,0,0, .1);
     border-radius: 10px;
