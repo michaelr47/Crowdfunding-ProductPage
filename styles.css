@@ -67,6 +67,7 @@ main {
     position: relative;
     /* width: 100%; */
     margin: -6rem 0px;
+    padding: 10px;
 }
 
 .headerLogo {
@@ -129,7 +130,7 @@ nav {
     border: 1px solid rgba(0,0,0, .1);
     border-radius: 10px;
     margin: 1.5rem;
-    padding: 1rem;
+    padding: .5rem;
     background-color: white;
     position: relative;
 }
@@ -152,31 +153,52 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    margin: 0px;
+    padding: 10px;
 }
 
 .backProject-Btn {
-    margin: 10px 1rem;
-    padding: 1.2rem;
+    width: 150px;
+    margin: 0px 1rem;
+    padding: 1rem;
     border-radius: 30px;
     border: none;
     background-color: var(--moderateCyan);
     color: white;
     font-weight: 700;
+    font-size: .775rem;
 }
 
 .bookmarkImg:hover, .backProject-Btn:hover {
     cursor: pointer;
 }
 
+
+/* backers section */
 .innerBackedStatus {
     text-align: center;
     border: 1px solid rgba(0,0,0, .1);
     border-radius: 10px;
-    margin: 1.5rem;
+    margin: 2rem;
     padding: 1rem;
     background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
  }
 
+ .backedMoneySpan, .totalBackersSpan, .backedDaysLeftSpan {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--darkGray);
+ }
+
+.borderBottom {
+    width: 75px;
+    margin: 1.5rem auto;
+    border-bottom: .5px solid var(--darkGray);
+}
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
@@ -184,3 +206,8 @@ nav {
 
 
 
+@media screen and (min-width: 768px) {
+    .backProject {
+        justify-content: space-around;
+    }
+}
