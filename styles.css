@@ -181,7 +181,7 @@ nav {
     border: 1px solid rgba(0,0,0, .1);
     border-radius: 10px;
     margin: 2rem;
-    padding: 1rem;
+    padding: 1.5rem; 
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -200,6 +200,14 @@ nav {
     border-bottom: .5px solid var(--darkGray);
 }
 
+.progress-bar {
+    width: 50%;
+    margin: 0 auto;
+    height: 20px;
+    border-radius: 25px;
+    background-color: red;
+}
+
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
 
@@ -209,5 +217,5 @@ nav {
 @media screen and (min-width: 768px) {
     .backProject {
         justify-content: space-around;
-    }
-}
+    }  
+} 
