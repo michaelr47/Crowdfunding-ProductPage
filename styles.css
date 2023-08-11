@@ -66,7 +66,7 @@ header {
 main {
     position: relative;
     /* width: 100%; */
-     
+    margin: -6rem 0px;
 }
 
 .headerLogo {
@@ -140,6 +140,10 @@ nav {
     left: 45%;
 }
 
+.product-name {
+    font-weight: 700;
+    /* font-size: 1.5rem; */
+}
 .product-name, .product-description, .backProject {
     margin: 1.2rem;
 }
@@ -149,6 +153,7 @@ nav {
     justify-content: center;
     align-items: center;
 }
+
 .backProject-Btn {
     margin: 10px 1rem;
     padding: 1.2rem;
