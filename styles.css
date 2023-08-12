@@ -189,24 +189,33 @@ nav {
  }
 
  .backedMoneySpan, .totalBackersSpan, .backedDaysLeftSpan {
-    font-size: 1rem;
+    font-size: .675rem;
     font-weight: 400;
     color: var(--darkGray);
  }
 
 .borderBottom {
-    width: 75px;
+    width: 70px;
     margin: 1.5rem auto;
     border-bottom: .5px solid var(--darkGray);
 }
 
 .progress-bar {
-    width: 50%;
-    margin: 0 auto;
-    height: 20px;
+    width: 100%;
+    margin: 15px auto;
+    height: 10px;
     border-radius: 25px;
-    background-color: red;
+    background-color: rgba(0,0,0,.1);
 }
+
+.actual-progress {
+    width: 75%;
+    height: 10px;
+    border-radius: 25px;
+    background-color: var(--moderateCyan);
+}
+
+
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
@@ -218,4 +227,23 @@ nav {
     .backProject {
         justify-content: space-around;
     }  
+
+    .spaceBetween {
+        display: flex;
+        justify-content: space-evenly;
+        width: 90%;
+    }
+
+    .borderBottom {
+        display: none;
+        border:none;
+    }
+    .borderRight {
+        display: block;
+        height: 50px;
+        width: 1px;
+        margin: 0px 30px;
+        border-right: 1px solid rgba(0,0,0,.2);
+        
+    }
 } 
