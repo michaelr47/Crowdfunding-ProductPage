@@ -246,4 +246,7 @@ nav {
         border-right: 1px solid rgba(0,0,0,.2);
         
     }
+    .backedMoneySpan, .totalBackersSpan, .backedDaysLeftSpan {
+        font-size: .875rem;
+    }
 } 
