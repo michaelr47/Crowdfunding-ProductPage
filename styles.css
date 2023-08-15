@@ -237,6 +237,16 @@ nav {
     color: var(--darkGray);
     font-size: 14px;
 }
+
+
+.reward {
+    max-width: 750px;
+    margin: 1rem 0px;
+    padding: 1rem;
+    border: 1px solid rgb(195, 195, 195);
+    border-radius: 5px;
+
+}
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
 
