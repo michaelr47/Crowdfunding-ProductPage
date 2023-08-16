@@ -233,19 +233,45 @@ nav {
 .about-Title {
     margin: 1rem 0px;
 }
+
 .about-Para{
     color: var(--darkGray);
     font-size: 14px;
+    margin: 10px 0px;
+    line-height: 25px;
 }
-
 
 .reward {
     max-width: 750px;
-    margin: 1rem 0px;
-    padding: 1rem;
+    /* height: 250px; */
+    margin: 2rem 0px;
+    padding: 1.2rem;
     border: 1px solid rgb(195, 195, 195);
     border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
 
+.rewardHeading {
+    display: flex;
+    flex-direction: column;
+}
+
+.rewardDescription {
+    font-size: 14px;
+    color: var(--darkGray);
+    line-height: 25px;
+}
+
+.rewardStatus {
+    display: flex;
+    flex-direction: column;
+}
+.pledgeAmount {
+    color: var(--moderateCyan);
+    font-weight: 500;
+    margin: 5px 0px
 }
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
@@ -282,4 +308,16 @@ nav {
     .backedMoneySpan, .totalBackersSpan, .backedDaysLeftSpan {
         font-size: .875rem;
     }
+    .rewardHeading {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .rewardStatus {
+        flex-direction: row;
+        justify-content: space-between;
+        
+    }
+    
+
 } 
