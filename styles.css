@@ -15,6 +15,7 @@
 body,html {
     min-height: 100vh;
     font-family: 'Commissioner', sans-serif;
+    background-color: hsla(0, 0%, 91%, 0.1);
 }
 
 header {
@@ -178,14 +179,14 @@ nav {
 .progress-bar {
     width: 100%;
     margin: 15px auto;
-    height: 10px;
+    height: 12px;
     border-radius: 25px;
     background-color: rgba(0,0,0,.1);
 }
 
 .actual-progress {
     width: 75%;
-    height: 10px;
+    height: 100%;
     border-radius: 25px;
     background-color: var(--moderateCyan);
 }
@@ -264,7 +265,7 @@ nav {
 
 @media screen and (min-width: 768px) {
     .backProject {
-        justify-content: space-around;
+        justify-content: space-between;
     } 
 
     .product-name {
@@ -294,6 +295,9 @@ nav {
         margin: 0px 30px;
         border-right: 1px solid rgba(0,0,0,.2);
         
+    }
+    .backedMoney, .totalBackers, .backedDaysLeft {
+        font-size: 2rem;
     }
     .backedMoneySpan, .totalBackersSpan, .backedDaysLeftSpan {
         font-size: .950rem;
