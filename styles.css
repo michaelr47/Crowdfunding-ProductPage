@@ -1,34 +1,3 @@
-/* # Front-end Style Guide
-
-## Layout
-
-The designs were created to the following widths:
-
-- Mobile: 375px
-- Desktop: 1440px
-
-## Colors
-
-### Primary
-
-- Moderate cyan: hsl(176, 50%, 47%)
-- Dark cyan: hsl(176, 72%, 28%)
-
-### Neutral
-
-- Black: hsl(0, 0%, 0%)
-- Dark gray: hsl(0, 0%, 48%)
-
-## Typography
-
-### Body Copy
-
-- Font size: 16px
-
-### Font
-
-- Family: [Commissioner](https://fonts.google.com/specimen/Commissioner)
-- Weights: 400, 500, 700 */
 @import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap');
 
 :root {
@@ -66,7 +35,7 @@ header {
 main {
     position: relative;
     /* width: 100%; */
-    margin: -6rem 0px;
+    margin: -7rem 0px;
     padding: 10px;
 }
 
@@ -130,7 +99,7 @@ nav {
     border: 1px solid rgba(0,0,0, .1);
     border-radius: 10px;
     margin: 2rem;
-    padding: .5rem;
+    padding: 1.5rem;
     background-color: white;
     position: relative;
 }
@@ -142,6 +111,7 @@ nav {
 }
 
 .product-name {
+    font-size: 1.25rem;
     font-weight: 700;
 }
 
@@ -186,7 +156,7 @@ nav {
     border: 1px solid rgba(0,0,0, .1);
     border-radius: 10px;
     margin: 2rem;
-    padding: 1.5rem; 
+    padding: 2rem; 
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -194,7 +164,7 @@ nav {
  }
 
  .backedMoneySpan, .totalBackersSpan, .backedDaysLeftSpan {
-    font-size: .675rem;
+    font-size: .875rem;
     font-weight: 400;
     color: var(--darkGray);
  }
@@ -246,7 +216,7 @@ nav {
     margin: 2rem 0px;
     padding: 1.2rem;
     border: 1px solid rgb(195, 195, 195);
-    border-radius: 5px;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -266,7 +236,7 @@ nav {
 .rewardStatus {
     display: flex;
     flex-direction: column;
-    margin: 15px 0px;
+    margin-top: 15px;
 }
 
 .pledgeAmount {
@@ -295,8 +265,15 @@ nav {
 @media screen and (min-width: 768px) {
     .backProject {
         justify-content: space-around;
-    }  
-    .product-description, .about-Para {
+    } 
+
+    .product-name {
+        font-size: 1.75rem;
+    }
+    .innerAboutProject {
+        padding: 2rem;
+    }
+    .product-description, .about-Para, .rewardDescription {
         font-size: 1rem;
     }
 
@@ -319,7 +296,11 @@ nav {
         
     }
     .backedMoneySpan, .totalBackersSpan, .backedDaysLeftSpan {
-        font-size: .875rem;
+        font-size: .950rem;
+    }
+
+    .reward {
+        padding: 2rem 1.2rem;
     }
     .rewardHeading {
         flex-direction: row;
