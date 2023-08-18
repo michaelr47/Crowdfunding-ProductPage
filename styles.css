@@ -20,9 +20,9 @@ body,html {
 
 header {
     height: 50vh;
-    background-color: coral;
+    background-color: gray;
     color: white;
-    padding: 1rem 10px;
+    padding: 1.5rem 1rem;
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -30,7 +30,6 @@ header {
     background-repeat: no-repeat;
     background-position: center; 
     background-size: cover;
-    object-fit: contain;
 }
 
 main {
@@ -264,6 +263,9 @@ nav {
 
 
 @media screen and (min-width: 768px) {
+    header {
+        background-image: url('./images/image-hero-desktop.jpg');
+    }
     .backProject {
         justify-content: space-between;
     } 
