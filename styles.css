@@ -47,7 +47,7 @@ main {
 }
 
 .hamburger-div { margin-right: 1rem; }
-
+.close { display: none; }
 nav {
    position: absolute;
    top: 25%;
