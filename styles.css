@@ -49,43 +49,40 @@ main {
 .hamburger-div { margin-right: 1rem; }
 .close { display: none; }
 nav {
+   font-weight: 500;
    position: absolute;
-   
-   top: 25%;
-   z-index: 2;
+   top: 20%;
    left: 10%; 
-   width: 325px; 
+   z-index: 2;
+   width: 300px; 
    height: 200px;
-   background-color: red;
-   border-radius: 10px;
-   /* box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px; */
-   /* display: inline; */
-   margin-right: auto; 
-   margin-left: auto;
 }
 
 .navList {
+    border-radius: 5px;
     width: 100%;
     height: 100%;
     list-style-type: none;
     background-color: white;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .nav-items {
     border-bottom: 1px solid rgba(0, 0, 0, .1);
-    padding: 1rem 1rem;
-    /* width: 100%; */
-
+    padding: 1rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
+
 .nav-items a {
     color: black;
     text-decoration: none;
 }
-/* start of main */
 
+/* start of main */
 .widthAndCentered {
     max-width: 775px;
     margin: 0 auto;
