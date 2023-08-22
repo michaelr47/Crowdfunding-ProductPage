@@ -18,6 +18,16 @@ body,html {
     background-color: hsla(0, 0%, 91%, 0.1);
 }
 
+.topShadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 1;
+    /* box-shadow: offsetX offsetY blurRadius spreadRadius color */
+    box-shadow: 0px 0px 100px 75px rgba(0,0,0, .5);
+    
+}
 header {
     height: 50vh;
     background-color: gray;
@@ -30,23 +40,27 @@ header {
     background-repeat: no-repeat;
     background-position: center; 
     background-size: cover;
+
 }
 
 main {
     position: relative;
-    /* width: 100%; */
     margin: -7rem 0px;
     padding: 10px;
 }
 
+.headerLogoDiv {
+    z-index: 2;
+}
 .headerLogo {
     align-self: flex-start;
     width: 135px;
     object-fit: contain;
     margin-left: 1rem;
+ 
 }
 
-.hamburger-div { margin-right: 1rem; }
+.hamburger-div { margin-right: 1rem; z-index: 2; }
 .close { display: none; }
 nav {
    font-weight: 500;
@@ -88,14 +102,6 @@ nav {
     margin: 0 auto;
 }
 
-/* .bookmarkSection { */
-    /* position: absolute;
-    top: -110px;  */
-    /* left: 50%; */
-     /* transform: translate(50%, 50%); */
-
-    /* ignore above css, tried centering with absolute position */
-/* } */
 
 .innerBookmarkSection {
     text-align: center;
