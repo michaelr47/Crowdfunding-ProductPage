@@ -8,7 +8,7 @@ hamburger.addEventListener('click', () => {
     
     let elements = [hamburger, closeIcon, modalBackdrop, mobileAndTabletNav];
     
-    elements.forEach((el, i) => {
+    elements.forEach(el => {
         if (el === hamburger) {
             el.style.display = 'none';
         } else {
@@ -17,7 +17,7 @@ hamburger.addEventListener('click', () => {
     });
 
     closeIcon.addEventListener('click', () => {
-        elements.forEach((el, i) => {
+        elements.forEach(el => {
             if (el === hamburger) {
                 el.style.display = 'block';
             } else {

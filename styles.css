@@ -291,10 +291,33 @@ nav {
         left: 26%;
     }
 }
+
 @media screen and (min-width: 768px) {
+    .hamburger-div { display: none; }
+    .headerLogoDiv {
+        margin-left: 6rem;
+        margin-top: 1rem;
+    }
     header {
         background-image: url('./images/image-hero-desktop.jpg');
+        justify-content: space-between;
+        align-items:flex-start;
     }
+
+    nav {
+        position:initial;
+        display: block;
+        z-index: 1;
+        height: auto;
+        margin-right: 5rem;
+    }
+    .navList {
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: inherit;
+    }
+    .nav-items { border-bottom: none; }
+    .nav-items a {color: white; font-weight: normal; font-size: 14px;}
     .backProject {
         justify-content: space-between;
     } 
