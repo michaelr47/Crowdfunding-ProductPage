@@ -154,20 +154,20 @@ nav {
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin: 0px;
+    margin: 0px auto;
     padding: 10px;
 }
 
 .backProject-Btn {
-    width: 150px;
-    margin: 0px 1rem;
+    width: 180px;
+    margin: 0px .5rem 0px 0px;
     padding: 1rem;
     border-radius: 30px;
     border: none;
     background-color: var(--moderateCyan);
     color: white;
     font-weight: 700;
-    font-size: .775rem;
+    font-size: .8rem;
 }
 
 .bookmarkImg:hover, .backProject-Btn:hover {
