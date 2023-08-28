@@ -121,10 +121,10 @@ nav {
 
 .innerBookmarkSection {
     text-align: center;
-    border: 1px solid rgba(0,0,0, .1);
+    border: .5px solid rgba(0,0,0, .1);
     border-radius: 10px;
     margin: 2rem;
-    padding: 1.5rem;
+    padding: 1.5rem .875rem;
     background-color: white;
     position: relative;
 }
@@ -178,7 +178,7 @@ nav {
 /* backers section */
 .innerBackedStatus {
     text-align: center;
-    border: 1px solid rgba(0,0,0, .1);
+    border: .5px solid rgba(0,0,0, .1);
     border-radius: 10px;
     margin: 2rem;
     padding: 2rem; 
@@ -217,7 +217,7 @@ nav {
 
 /* about Project section */
 .innerAboutProject {
-    border: 1px solid rgba(0,0,0, .1);
+    border: .5px solid rgba(0,0,0, .1);
     border-radius: 10px;
     margin: 2rem;
     padding: 1.5rem; 
@@ -240,7 +240,7 @@ nav {
     max-width: 750px;
     margin: 2rem 0px;
     padding: 1.2rem;
-    border: 1px solid rgb(195, 195, 195);
+    border: 1px solid rgba(195, 195, 195, 0.6);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -319,6 +319,9 @@ nav {
 
     .nav-items { border-bottom: none; }
     .nav-items a {color: white; font-weight: normal; font-size: 14px;}
+    .innerBookmarkSection {
+        padding: 1.65rem;
+    }
     .backProject { justify-content: space-between; } 
 
     .tabAndDeskBookmark {
