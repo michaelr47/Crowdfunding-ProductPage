@@ -271,8 +271,8 @@ nav {
 }
 
 .rewardButton {
-    max-width: 150px;
-    padding: .675rem;
+    max-width: 140px;
+    padding: .875rem .575rem;
     border-radius: 30px;
     border: none;
     background-color: var(--moderateCyan);
