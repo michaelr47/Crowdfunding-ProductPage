@@ -67,3 +67,9 @@ const rewardFocus = () => {
 }
 
 rewardFocus();
+
+// for later use, modal reward options
+// let input = document.getElementById("something");
+// input.addEventListener("focus", function () {
+//     this.style.backgroundColor = "red";  
+//});

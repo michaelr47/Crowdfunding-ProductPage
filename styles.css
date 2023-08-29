@@ -168,9 +168,14 @@ nav {
     color: white;
     font-weight: 700;
     font-size: .8rem;
+    cursor: pointer;
+
+}
+.backProject-Btn:active, .rewardButton:active {
+    background-color: var(--darkCyan);
 }
 
-.bookmarkImg:hover, .backProject-Btn:hover {
+.bookmarkImg:hover {
     cursor: pointer;
 }
 
@@ -337,7 +342,7 @@ nav {
         align-items: center;
         cursor: pointer;
      }
-
+     .tabAndDeskBookmark:active {opacity: .7;}
     .bookmarkSpan { padding: 0px 20px; font-weight: 700; color: var(--darkGray) }
     .bookmarkImg { display: none; }
     .product-name { font-size: 1.75rem; }
