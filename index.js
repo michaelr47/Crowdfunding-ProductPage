@@ -47,3 +47,23 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+
+
+const rewardFocus = () => {
+    let rewards = document.querySelectorAll('.reward');
+  
+    let mapRewards = Array.from(rewards).map(reward => {
+        reward.addEventListener('click', () => {
+            if (!reward.classList.contains('rewardFocus')) {
+                reward.classList.add('rewardFocus')
+            } else {
+                reward.classList.remove('rewardFocus');
+            }
+        
+        })
+    });
+   
+    return mapRewards;
+}
+
+rewardFocus();
