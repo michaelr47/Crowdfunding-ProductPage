@@ -290,6 +290,7 @@ nav {
 .rewardFocus {
     border: 1px solid darkcyan;
 }
+.bookmarked { display: none; }
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
 
@@ -335,7 +336,7 @@ nav {
 
     .tabAndDeskBookmark {
         background-color: rgba(128, 128, 128, .1);
-        width: 27%;
+        width: 28%;
         border-radius: 30px;
         display: flex;
         justify-content: space-between;

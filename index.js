@@ -59,17 +59,25 @@ const rewardFocus = () => {
             } else {
                 reward.classList.remove('rewardFocus');
             }
-        
+            
         })
     });
    
     return mapRewards;
 }
 
-rewardFocus();
+const bookmarkProject = () => {
+    let bookmarkDiv = document.querySelector('.tabAndDeskBookmark');
+    let bookmarkSpan= document.querySelector('.bookmarkSpan');
+    let bookmarkedText = document.querySelector('.bookmarked');
 
-// for later use, modal reward options
-// let input = document.getElementById("something");
-// input.addEventListener("focus", function () {
-//     this.style.backgroundColor = "red";  
-//});
+    bookmarkDiv.addEventListener('click', () => {
+        bookmarkSpan.style.display = 'none';
+        bookmarkedText.style.display = 'inline';
+        bookmarkedText.classList.add('bookmarkSpan');
+    })
+}
+ 
+rewardFocus();
+bookmarkProject();
+
