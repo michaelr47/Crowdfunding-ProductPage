@@ -285,6 +285,7 @@ nav {
     font-weight: 700;
     font-size: .775rem;
     margin-top: 10px;
+    cursor: pointer;
 }
 
 .rewardFocus {
@@ -391,5 +392,8 @@ nav {
         justify-content: space-between;
         align-items: center;
     }
-
+    .rewardButton {
+    /* padding: .875rem .575rem; */
+        padding: 1rem 1.5rem;
+    }
 } 
