@@ -70,11 +70,16 @@ const bookmarkProject = () => {
     let bookmarkDiv = document.querySelector('.tabAndDeskBookmark');
     let bookmarkSpan= document.querySelector('.bookmarkSpan');
     let bookmarkedText = document.querySelector('.bookmarked');
+    let bookmarkImage = document.querySelector('.bookmarkImg');
+    console.log(bookmarkImage);
 
     bookmarkDiv.addEventListener('click', () => {
         bookmarkSpan.style.display = 'none';
         bookmarkedText.style.display = 'inline';
         bookmarkedText.classList.add('bookmarkSpan');
+        bookmarkedText.style.color = 'darkcyan';
+
+
     })
 }
  
