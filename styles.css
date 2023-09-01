@@ -75,7 +75,7 @@ main {
     width: 100vw;
     background-color: rgba(0, 0, 0, .2);    
     z-index: 1;
-    display: none;
+    /* display: none; */
 }
 nav {
    font-weight: 500;
@@ -178,7 +178,9 @@ nav {
 .bookmarkImg:hover {
     cursor: pointer;
 }
-
+/* 'bookmarked' text */
+.bookmarked { display: none; }
+/* div wrapping boomark img and text */
 .tabAndDeskBookmark { display: none; }
 /* backers section */
 .innerBackedStatus {
@@ -291,7 +293,16 @@ nav {
 .rewardFocus {
     border: 1px solid darkcyan;
 }
-.bookmarked { display: none; }
+
+/* modal section */
+.innerBackProjectModal {
+    z-index: 2;
+    position: absolute;
+    top: 10dvh;
+    max-width: 775px;
+    margin: 1rem;
+    background-color: white;
+}
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
 
