@@ -296,12 +296,15 @@ nav {
 
 /* modal section */
 .innerBackProjectModal {
-    z-index: 2;
     position: absolute;
-    top: 10dvh;
+    left: 0;
+    right: 0;
+    top: 5%;
     max-width: 775px;
-    margin: 1rem;
+    margin: auto;
+    padding: 1rem;
     background-color: white;
+    z-index: 2;
 }
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
@@ -404,7 +407,11 @@ nav {
         align-items: center;
     }
     .rewardButton {
-    /* padding: .875rem .575rem; */
         padding: 1rem 1.5rem;
     }
 } 
+
+/* more media queries
+    adding 'right: ' 
+        each time
+*/
