@@ -301,11 +301,24 @@ nav {
     right: 0;
     top: 5%;
     max-width: 775px;
-    margin: auto;
+    margin: 0 2rem;
     padding: 1rem;
     background-color: white;
     z-index: 2;
+    border-radius: 10px;
+   
 }
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: .5rem 1rem;
+}
+.modal-supportMsg {
+    margin-top: 1.5rem;
+}
+
+
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
 
@@ -409,7 +422,13 @@ nav {
     .rewardButton {
         padding: 1rem 1.5rem;
     }
+
+    .innerBackProjectModal {
+        margin: auto;
+        padding: 2rem;
+    }
 } 
+
 
 /* more media queries
     adding 'right: ' 
