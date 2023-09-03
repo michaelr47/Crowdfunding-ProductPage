@@ -318,6 +318,11 @@ nav {
     margin-top: 1.5rem;
 }
 
+.modal-reward-header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
@@ -430,7 +435,3 @@ nav {
 } 
 
 
-/* more media queries
-    adding 'right: ' 
-        each time
-*/
