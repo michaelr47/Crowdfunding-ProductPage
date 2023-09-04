@@ -341,6 +341,14 @@ nav {
     input[type="radio"] {
         margin-right: 2rem;
     }
+
+    .rowAndSpaceEvenly {
+        width: 300px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
 }
 
 @media screen and (min-width: 768px) {
