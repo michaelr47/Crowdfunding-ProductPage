@@ -299,7 +299,7 @@ nav {
     position: absolute;
     left: 0;
     right: 0;
-    top: 5%;
+    top: 1%;
     max-width: 775px;
     margin: 0 2rem;
     padding: 1rem;
@@ -316,6 +316,7 @@ nav {
 }
 .modal-supportMsg {
     margin-top: 1.5rem;
+    padding: 0px 1rem;
 }
 
 .modal-reward-header {
@@ -332,6 +333,13 @@ nav {
 @media screen and (min-width: 450px) {
     nav {
         left: 26%;
+    }
+
+    .modal-reward-header {
+        margin-right: auto;
+    }
+    input[type="radio"] {
+        margin-right: 2rem;
     }
 }
 

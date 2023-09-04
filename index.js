@@ -49,22 +49,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-const rewardFocus = () => {
-    let rewards = document.querySelectorAll('.reward');
+// const rewardFocus = () => {
+//     let rewards = document.querySelectorAll('.reward');
   
-    let mapRewards = Array.from(rewards).map(reward => {
-        reward.addEventListener('click', () => {
-            if (!reward.classList.contains('rewardFocus')) {
-                reward.classList.add('rewardFocus')
-            } else {
-                reward.classList.remove('rewardFocus');
-            }
+//     let mapRewards = Array.from(rewards).map(reward => {
+//         reward.addEventListener('click', () => {
+//             if (!reward.classList.contains('rewardFocus')) {
+//                 reward.classList.add('rewardFocus')
+//             } else {
+//                 reward.classList.remove('rewardFocus');
+//             }
             
-        })
-    });
+//         })
+//     });
    
-    return mapRewards;
-}
+//     return mapRewards;
+// }
 
 const bookmarkProject = () => {
     let bookmarkDiv = document.querySelector('.tabAndDeskBookmark');
