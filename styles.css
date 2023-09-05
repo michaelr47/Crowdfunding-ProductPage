@@ -325,6 +325,8 @@ nav {
     align-items: center;
 }
 
+.productLeft { display: none; }
+
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
 
@@ -335,9 +337,8 @@ nav {
         left: 26%;
     }
 
-    .modal-reward-header {
-        margin-right: auto;
-    }
+    .modal-reward-header { justify-content: flex-start; }
+
     input[type="radio"] {
         margin-right: 2rem;
     }
@@ -349,6 +350,7 @@ nav {
         justify-content: space-evenly;
         align-items: center;
     }
+
 }
 
 @media screen and (min-width: 768px) {
@@ -448,6 +450,12 @@ nav {
         margin: auto;
         padding: 2rem;
     }
+    .productLeft {
+        margin-left: auto;
+        display: block;
+    }
+
+    .innerBackProjectModal .rewards .reward .rewardStatus { display: none; }
 } 
 
 

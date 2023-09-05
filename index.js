@@ -31,7 +31,7 @@ window.addEventListener('resize', () => {
     let hamburger = document.querySelector('.hamburger');
     let windowSizeX = window.innerWidth;
     
-    if (windowSizeX >= 768) {
+    if (windowSizeX > 768) {
         hamburger.style.display = 'none';
 
     } else {
@@ -42,7 +42,7 @@ window.addEventListener('resize', () => {
 document.addEventListener('DOMContentLoaded', () => {
 
     let windowSizeX = window.innerWidth;
-    if (windowSizeX >= 768) {
+    if (windowSizeX > 768) {
         hamburger.style.display = 'none';
     }
 });
@@ -83,6 +83,6 @@ const bookmarkProject = () => {
     })
 }
  
-rewardFocus();
+// rewardFocus();
 bookmarkProject();
 
