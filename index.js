@@ -71,7 +71,6 @@ const bookmarkProject = () => {
     let bookmarkSpan= document.querySelector('.bookmarkSpan');
     let bookmarkedText = document.querySelector('.bookmarked');
     let bookmarkImage = document.querySelector('.bookmarkImg');
-    console.log(bookmarkImage);
 
     bookmarkDiv.addEventListener('click', () => {
         bookmarkSpan.style.display = 'none';

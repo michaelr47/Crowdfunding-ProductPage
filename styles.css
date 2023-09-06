@@ -313,6 +313,9 @@ nav {
     align-items: center;
     margin: .5rem 1rem;
 }
+
+.modal-closeIcon { cursor: pointer; }
+.modal-closeIcon path { fill: red; }
 .modal-supportMsg {
     margin-top: 1.5rem;
     padding: 0px 1rem;
@@ -324,11 +327,11 @@ input[type="radio"] {
 
 .modal-reward-header {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-evenly; /* change to space-between maybeeee */
     align-items: center;
 }
 .modalHeading-title { margin-right: 10px;}
-.modalHeading-title:hover { color: var(--moderateCyan); cursor: pointer;}
+.modalHeading-title:hover label { color: var(--moderateCyan); cursor: pointer;}
 .innerBackProjectModal .rewardStatus h2{ font-size: 18px; }
 .productLeft { display: none; }
 
