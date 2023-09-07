@@ -307,13 +307,15 @@ nav {
     z-index: 2;
     border-radius: 10px;
 }
+.noPad { padding: 0px; }
 .modal-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: .5rem 1rem;
 }
-
+.modalHeading-title { margin-right: 10px; }
+.modalHeading-title:hover label { color: var(--moderateCyan); cursor: pointer;}
 .modal-closeIcon { cursor: pointer; }
 .modal-closeIcon path { fill: red; }
 .modal-supportMsg {
@@ -327,13 +329,46 @@ input[type="radio"] {
 
 .modal-reward-header {
     display: flex;
-    justify-content: space-evenly; /* change to space-between maybeeee */
+    justify-content: space-evenly;
     align-items: center;
 }
 
-.rewardSelected { display: none; }
-.modalHeading-title { margin-right: 10px;}
-.modalHeading-title:hover label { color: var(--moderateCyan); cursor: pointer;}
+.innerRewardModal { padding: 1.2rem; }
+
+.rewardSelected { 
+    width: 100%; 
+    border-top: 1.5px solid #e8e8e8;
+    padding: 1.5rem 1.5rem .775rem; 
+    text-align: center;
+}
+.rewardSelected-Enter {
+    font-size: 14px;
+    color: var(--darkGray);
+}
+
+.inputAmount {
+    border: 1px solid #bfbfbf;
+    height: 40px;
+    width: 90px;
+    border-radius: 50px;
+    margin: 10px;
+    outline: none;
+    text-align: center;
+}
+
+/* .inputAmount::before */
+
+.continueBtn {
+    border: none;
+    border-radius: 50px;
+    height: 40px;
+    width: 100px;
+    background-color: var(--moderateCyan);
+    color: white;
+    font-weight: 700;
+    padding: .775rem 1rem;
+    cursor: pointer;
+}
 .innerBackProjectModal .rewardStatus h2{ font-size: 18px; }
 .productLeft { display: none; }
 
@@ -439,7 +474,7 @@ input[type="radio"] {
         font-size: .950rem;
     }
 
-    .reward {
+    .innerRewardModal {
         padding: 2rem 1.2rem;
     }
     .rewardHeading {
