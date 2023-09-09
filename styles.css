@@ -294,6 +294,11 @@ nav {
     border: 1px solid darkcyan;
 }
 
+.disabled {
+    opacity: .4;
+    pointer-events: none;
+}
+#disabledBtn { background-color: darkgray; }
 /* modal section */
 .innerBackProjectModal {
     position: absolute;
@@ -498,7 +503,7 @@ input[type="radio"] {
         justify-content: space-between;
         align-items: center;
     }
-    .rewardButton {
+    .rewardButton, #disabledBtn {
         padding: 1rem 1.5rem;
     }
 
