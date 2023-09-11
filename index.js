@@ -49,22 +49,37 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-// const rewardFocus = () => {
-//     let rewards = document.querySelectorAll('.reward');
-  
-//     let mapRewards = Array.from(rewards).map(reward => {
-//         reward.addEventListener('click', () => {
-//             if (!reward.classList.contains('rewardFocus')) {
-//                 reward.classList.add('rewardFocus')
-//             } else {
-//                 reward.classList.remove('rewardFocus');
-//             }
+const rewardFocus = () => {
+    let rewards = document.querySelectorAll('.reward');
+    let radioCheck = document.querySelectorAll('input[type="radio"]');
+    let backProject = document.querySelector('backProject-Btn');
+    let continueBtnModal = document.querySelector('continueBtn');
+
+    // add click event listener on backproject btn
+        // display modal with reward options
+            // if radio.checked on either, add border and display input amount field
+            // else diff. radio is checked, untoggle old, and add styles as before ^
+
+            // input validation as well for each one to meet the reward qualif. threshold... $
+
+                // if all is met, after clicking contiue btn, add thank you modal
+    let mapRewards = Array.from(rewards).map(reward => {
+        reward.addEventListener('click', () => {
+            if (!reward.classList.contains('rewardFocus')) {
+                reward.classList.add('rewardFocus')
+            } else {
+                reward.classList.remove('rewardFocus');
+            }
             
-//         })
-//     });
+        })
    
-//     return mapRewards;
-// }
+    });
+
+    
+    
+  
+    return mapRewards;
+}
 
 const bookmarkProject = () => {
     let bookmarkDiv = document.querySelector('.tabAndDeskBookmark');
@@ -82,6 +97,6 @@ const bookmarkProject = () => {
     })
 }
  
-// rewardFocus();
+rewardFocus();
 bookmarkProject();
 
