@@ -82,12 +82,14 @@ const rewardFocus = () => {
 }
 
 const bookmarkProject = () => {
-    let bookmarkDiv = document.querySelector('.tabAndDeskBookmark');
-    let bookmarkSpan= document.querySelector('.bookmarkSpan');
-    let bookmarkedText = document.querySelector('.bookmarked');
-    let bookmarkImage = document.querySelector('.bookmarkImg');
+    let bookmarkDiv = document.querySelector('.tabAndDeskBookmark'); // div
+    let bookmarkSpan = document.querySelector('.bookmarkSpan'); // bookmark
+    let bookmarkedText = document.querySelector('.bookmarked'); // bookmarked
+    let bookmarkImage = document.querySelector('.bookmark'); // bookmarkImg in div Container 
+    
 
     bookmarkDiv.addEventListener('click', () => {
+        bookmarkImage.classList.add('bookmark');
         bookmarkSpan.style.display = 'none';
         bookmarkedText.style.display = 'inline';
         bookmarkedText.classList.add('bookmarkSpan');

@@ -425,9 +425,10 @@ input[type="radio"] {
     cursor: pointer;
 }
 
-.bookmark g {
-    fill: red;
-}
+.bookmark {
+    filter: invert(34%) sepia(74%) saturate(446%) hue-rotate(127deg) brightness(98%) contrast(94%);
+ }
+ 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
 
@@ -488,7 +489,7 @@ input[type="radio"] {
 
     .tabAndDeskBookmark {
         background-color: rgba(128, 128, 128, .1);
-        width: 28%;
+        width: 29%;
         border-radius: 30px;
         display: flex;
         justify-content: space-between;
