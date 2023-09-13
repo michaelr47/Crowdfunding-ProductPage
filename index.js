@@ -50,19 +50,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 const rewardFocus = () => {
-    let rewards = document.querySelectorAll('.reward');
-    let radioCheck = document.querySelectorAll('input[type="radio"]');
-    let backProject = document.querySelector('backProject-Btn');
-    let continueBtnModal = document.querySelector('continueBtn');
-
-    // add click event listener on backproject btn
-        // display modal with reward options
-            // if radio.checked on either, add border and display input amount field
-            // else diff. radio is checked, untoggle old, and add styles as before ^
-
-            // input validation as well for each one to meet the reward qualif. threshold... $
-
-                // if all is met, after clicking contiue btn, add thank you modal
+    let rewards = document.querySelectorAll('.innerBackProjectModal .reward');
+    console.log(rewards);
     let mapRewards = Array.from(rewards).map(reward => {
         reward.addEventListener('click', () => {
             if (!reward.classList.contains('rewardFocus')) {
@@ -98,6 +87,33 @@ const bookmarkProject = () => {
 
     })
 }
+
+
+const displayModal = () => {
+ 
+    let backProjectButton = document.querySelector('.backProject-Btn');
+    let modalDarkBackground = document.querySelector('.modalBackdrop');
+    let modalWithRewardOptions = document.querySelector('.innerBackProjectModal');
+
+    let radioCheck = document.querySelectorAll('input[type="radio"]');
+    let continueBtnModal = document.querySelector('continueBtn');
+
+
+    backProjectButton.addEventListener('click', () => {
+        modalDarkBackground.style.display = ''
+        modalWithRewardOptions.style.display = '';
+    })
+
+}
+displayModal()
+// add click event listener on backproject btn
+        // display modal with reward options
+            // if radio.checked on either, add border and display input amount field
+            // else diff. radio is checked, untoggle old, and add styles as before ^
+
+            // input validation as well for each one to meet the reward qualif. threshold... $
+
+                // if all is met, after clicking contiue btn, add thank you modal
  
 rewardFocus();
 bookmarkProject();
