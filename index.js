@@ -45,13 +45,15 @@ document.addEventListener('DOMContentLoaded', () => {
     if (windowSizeX > 768) {
         hamburger.style.display = 'none';
     }
+
+    displayModal();
 });
 
 
 
 const rewardFocus = () => {
     let rewards = document.querySelectorAll('.innerBackProjectModal .reward');
-    console.log(rewards);
+    
     let mapRewards = Array.from(rewards).map(reward => {
         reward.addEventListener('click', () => {
             if (!reward.classList.contains('rewardFocus')) {
@@ -89,10 +91,10 @@ const bookmarkProject = () => {
 }
 
 
-const displayModal = () => {
+function displayModal() {
  
     let backProjectButton = document.querySelector('.backProject-Btn');
-    let modalDarkBackground = document.querySelector('.modalBackdrop');
+    let modalDarkBackground = document.querySelector('.modalBackDrop');
     let modalWithRewardOptions = document.querySelector('.innerBackProjectModal');
 
     let radioCheck = document.querySelectorAll('input[type="radio"]');
@@ -100,12 +102,14 @@ const displayModal = () => {
 
 
     backProjectButton.addEventListener('click', () => {
-        modalDarkBackground.style.display = ''
-        modalWithRewardOptions.style.display = '';
+        modalWithRewardOptions.style.display = 'inline';
+        modalDarkBackground.style.display = 'inline';
+
     })
+    
 
 }
-displayModal()
+// displayModal();
 // add click event listener on backproject btn
         // display modal with reward options
             // if radio.checked on either, add border and display input amount field
