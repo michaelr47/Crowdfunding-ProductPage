@@ -312,6 +312,7 @@ nav {
     z-index: 2;
     border-radius: 10px;
     display: none;
+    animation: fadeIn .3s ease-in linear
 }
 .noPad { padding: 0px; }
 .modal-header {
@@ -571,4 +572,15 @@ input[type="radio"] {
     }
 } 
 
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
 

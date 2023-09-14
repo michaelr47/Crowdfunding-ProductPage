@@ -1,4 +1,17 @@
 
+document.addEventListener('DOMContentLoaded', () => {
+
+    let windowSizeX = window.innerWidth;
+    if (windowSizeX > 768) {
+        hamburger.style.display = 'none';
+    }
+
+    displayModal();
+});
+
+
+
+
 let hamburger = document.querySelector('.hamburger');
 
 hamburger.addEventListener('click', () => {
@@ -39,21 +52,11 @@ window.addEventListener('resize', () => {
     }
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-
-    let windowSizeX = window.innerWidth;
-    if (windowSizeX > 768) {
-        hamburger.style.display = 'none';
-    }
-
-    displayModal();
-});
-
-
 
 const rewardFocus = () => {
+    // reward options INSIDE modal
     let rewards = document.querySelectorAll('.innerBackProjectModal .reward');
-    
+    //map throught options adding click event 
     let mapRewards = Array.from(rewards).map(reward => {
         reward.addEventListener('click', () => {
             if (!reward.classList.contains('rewardFocus')) {
@@ -66,8 +69,7 @@ const rewardFocus = () => {
    
     });
 
-    
-    
+
   
     return mapRewards;
 }
@@ -96,17 +98,34 @@ function displayModal() {
     let backProjectButton = document.querySelector('.backProject-Btn');
     let modalDarkBackground = document.querySelector('.modalBackDrop');
     let modalWithRewardOptions = document.querySelector('.innerBackProjectModal');
+    let closeModalButton = document.querySelector('.modal-closeIcon');
 
     let radioCheck = document.querySelectorAll('input[type="radio"]');
     let continueBtnModal = document.querySelector('continueBtn');
 
 
-    backProjectButton.addEventListener('click', () => {
+    backProjectButton.addEventListener('click', () => { 
         modalWithRewardOptions.style.display = 'inline';
         modalDarkBackground.style.display = 'inline';
 
+        if (modalDarkBackground && modalWithRewardOptions) { // explicit if check 
+            modalDarkBackground.addEventListener('click', () => {
+                modalDarkBackground.style.display = 'none';
+                modalWithRewardOptions.style.display = 'none';
+            })
+
+
+            closeModalButton.addEventListener('click', () => {
+                modalDarkBackground.style.display = 'none';
+                modalWithRewardOptions.style.display = 'none';
+            })
+        }
+
+        // rewardFocus();
+
     })
     
+  
 
 }
 // displayModal();
@@ -119,6 +138,6 @@ function displayModal() {
 
                 // if all is met, after clicking contiue btn, add thank you modal
  
-rewardFocus();
+// rewardFocus();
 bookmarkProject();
 
