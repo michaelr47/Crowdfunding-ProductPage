@@ -312,7 +312,7 @@ nav {
     z-index: 2;
     border-radius: 10px;
     display: none;
-    animation: fadeIn .3s ease-in linear
+    animation: fadeIn .2s ease-in;
 }
 .noPad { padding: 0px; }
 .modal-header {
