@@ -69,9 +69,21 @@ const rewardFocus = () => {
    
     });
 
+    let radios = document.querySelectorAll('input[type="radio"]');
+    // let continueBtnModal = document.querySelector('continueBtn');
+    
+        for (let radio of radios) {
+            radio.addEventListener('click', () => {
+                let selectedReward;
+                if (radio.checked) {
+                    selectedReward = radio.classList.add('rewardFocus');
+                
+                    
+                }
+            })
+        }
 
-  
-    return mapRewards;
+    // return mapRewards;
 }
 
 const bookmarkProject = () => {
@@ -100,9 +112,6 @@ function displayModal() {
     let modalWithRewardOptions = document.querySelector('.innerBackProjectModal');
     let closeModalButton = document.querySelector('.modal-closeIcon');
 
-    let radioCheck = document.querySelectorAll('input[type="radio"]');
-    let continueBtnModal = document.querySelector('continueBtn');
-
 
     backProjectButton.addEventListener('click', () => { 
         modalWithRewardOptions.style.display = 'inline';
@@ -121,7 +130,7 @@ function displayModal() {
             })
         }
 
-        // rewardFocus();
+        rewardFocus();
 
     })
     
@@ -138,6 +147,6 @@ function displayModal() {
 
                 // if all is met, after clicking contiue btn, add thank you modal
  
-// rewardFocus();
+
 bookmarkProject();
 

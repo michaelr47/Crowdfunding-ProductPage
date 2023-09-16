@@ -336,6 +336,7 @@ input[type="radio"] {
     width: 20px;
     filter: hue-rotate(305deg);
     border-color: lightgray;
+    cursor: pointer;
 }
 .modal-reward-header {
     display: flex;
