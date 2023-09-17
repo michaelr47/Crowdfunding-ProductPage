@@ -10,8 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-
-
 let hamburger = document.querySelector('.hamburger');
 
 hamburger.addEventListener('click', () => {
@@ -56,34 +54,23 @@ window.addEventListener('resize', () => {
 const rewardFocus = () => {
     // reward options INSIDE modal
     let rewards = document.querySelectorAll('.innerBackProjectModal .reward');
-    //map throught options adding click event 
-    let mapRewards = Array.from(rewards).map(reward => {
-        reward.addEventListener('click', () => {
-            if (!reward.classList.contains('rewardFocus')) {
-                reward.classList.add('rewardFocus')
-            } else {
-                reward.classList.remove('rewardFocus');
-            }
-            
-        })
-   
-    });
-
+    // input radio buttons
     let radios = document.querySelectorAll('input[type="radio"]');
-    // let continueBtnModal = document.querySelector('continueBtn');
     
-        for (let radio of radios) {
-            radio.addEventListener('click', () => {
-                let selectedReward;
-                if (radio.checked) {
-                    selectedReward = radio.classList.add('rewardFocus');
-                
-                    
-                }
-            })
-        }
-
-    // return mapRewards;
+    // loop over radios 
+    for (let i = 0; i < radios.length - 1; i++) {
+        //adding click event to all 
+        radios[i].addEventListener('click', () => {
+            // loop over reward containers to remove focus state
+            for (let j = 0; j < rewards.length - 1; j++) {
+                rewards[j].classList.remove('rewardFocus');
+            }
+            // if checked, then add focus state to corresponding reward container
+            if (radios[i].checked) {
+                rewards[i].classList.add('rewardFocus');
+            }
+        })
+    }
 }
 
 const bookmarkProject = () => {
