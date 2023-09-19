@@ -56,18 +56,22 @@ const rewardFocus = () => {
     let rewards = document.querySelectorAll('.innerBackProjectModal .reward');
     // input radio buttons
     let radios = document.querySelectorAll('input[type="radio"]');
+    // selected reward options
+    let selectedReward = document.querySelectorAll('.rewardSelected');
     
     // loop over radios 
-    for (let i = 0; i < radios.length - 1; i++) {
+    for (let i = 0; i < radios.length; i++) {
         //adding click event to all 
         radios[i].addEventListener('click', () => {
             // loop over reward containers to remove focus state
-            for (let j = 0; j < rewards.length - 1; j++) {
+            for (let j = 0; j < rewards.length; j++) {
                 rewards[j].classList.remove('rewardFocus');
+                selectedReward[j].classList.add('hidden');
             }
             // if checked, then add focus state to corresponding reward container
             if (radios[i].checked) {
                 rewards[i].classList.add('rewardFocus');
+                selectedReward[i].classList.remove('hidden');
             }
         })
     }
@@ -94,17 +98,17 @@ const bookmarkProject = () => {
 
 function displayModal() {
  
-    let backProjectButton = document.querySelector('.backProject-Btn');
-    let modalDarkBackground = document.querySelector('.modalBackDrop');
-    let modalWithRewardOptions = document.querySelector('.innerBackProjectModal');
-    let closeModalButton = document.querySelector('.modal-closeIcon');
+    let backProjectButton = document.querySelector('.backProject-Btn'); // button to display rewards
+    let modalDarkBackground = document.querySelector('.modalBackDrop'); // modal dark bg
+    let modalWithRewardOptions = document.querySelector('.innerBackProjectModal'); // actual modal 
+    let closeModalButton = document.querySelector('.modal-closeIcon'); // closing icon button
 
 
     backProjectButton.addEventListener('click', () => { 
         modalWithRewardOptions.style.display = 'inline';
         modalDarkBackground.style.display = 'inline';
 
-        if (modalDarkBackground && modalWithRewardOptions) { // explicit if check 
+        if (modalDarkBackground && modalWithRewardOptions) { // explicit check if both elements are present
             modalDarkBackground.addEventListener('click', () => {
                 modalDarkBackground.style.display = 'none';
                 modalWithRewardOptions.style.display = 'none';

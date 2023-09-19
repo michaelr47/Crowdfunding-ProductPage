@@ -351,7 +351,7 @@ input[type="radio"] {
     border-top: 1.5px solid #e8e8e8;
     padding: 1.5rem 1.5rem .775rem; 
     text-align: center;
-    display: none;
+    
 }
 .rewardSelected-Enter {
     font-size: 14px;
