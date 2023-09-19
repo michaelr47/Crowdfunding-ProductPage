@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
         hamburger.style.display = 'none';
     }
 
-    displayModal();
 });
 
 
@@ -59,19 +58,18 @@ const rewardFocus = () => {
     // selected reward options
     let selectedReward = document.querySelectorAll('.rewardSelected');
     
+
     // loop over radios 
-    for (let i = 0; i < radios.length; i++) {
+    for (let i = 0; i < radios.length - 1; i++) { 
         //adding click event to all 
         radios[i].addEventListener('click', () => {
             // loop over reward containers to remove focus state
-            for (let j = 0; j < rewards.length; j++) {
+            for (let j = 0; j < rewards.length - 1; j++) {
                 rewards[j].classList.remove('rewardFocus');
-                selectedReward[j].classList.add('hidden');
             }
             // if checked, then add focus state to corresponding reward container
             if (radios[i].checked) {
                 rewards[i].classList.add('rewardFocus');
-                selectedReward[i].classList.remove('hidden');
             }
         })
     }
@@ -128,16 +126,30 @@ function displayModal() {
   
 
 }
-// displayModal();
+
+
+function selectReward() {
+    let rewardButtons = document.querySelectorAll('.rewardButton');
+
+    Array.from(rewardButtons).forEach((btn, i) => {
+        rewardButtons.addEventListener('click', () => {
+            console.log(btn, i);
+        })
+    })
+}
+
+selectReward();
+displayModal();
+bookmarkProject();
+
+
+
 // add click event listener on backproject btn
-        // display modal with reward options
-            // if radio.checked on either, add border and display input amount field
-            // else diff. radio is checked, untoggle old, and add styles as before ^
+    // display modal with reward options
+        // if radio.checked on either, add border and display input amount field
+        // else diff. radio is checked, untoggle old, and add styles as before ^
 
             // input validation as well for each one to meet the reward qualif. threshold... $
 
                 // if all is met, after clicking contiue btn, add thank you modal
  
-
-bookmarkProject();
-
