@@ -2,7 +2,8 @@ const modalDarkBackground = document.querySelector('.modalBackDrop'); // modal d
 const modalWithRewardOptions = document.querySelector('.innerBackProjectModal'); // actual modal 
 const hamburger = document.querySelector('.hamburger'); // hamburger icon
 const backProjectButton = document.querySelector('.backProject-Btn'); // button to display rewards
-const rewardButtons = document.querySelectorAll('.rewardButton'); // 'select reward' buttons
+const rewardButtons = Array.from(document.querySelectorAll('.rewardButton')); // 'select reward' buttons
+
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -100,8 +101,9 @@ const bookmarkProject = () => {
 
 
 function displayModal(button) {
- 
+
     let closeModalButton = document.querySelector('.modal-closeIcon'); // closing icon button
+
     button.addEventListener('click', () => { 
         modalWithRewardOptions.style.display = 'inline';
         modalDarkBackground.style.display = 'inline';
@@ -128,7 +130,7 @@ function displayModal(button) {
 
 
     rewardButtons.forEach(btn => {
-        btn.addEventListener('click', displayModal(rewardButtons));
+        btn.addEventListener('click', displayModal(btn));
     });
 
 
