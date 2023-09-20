@@ -1,3 +1,8 @@
+const modalDarkBackground = document.querySelector('.modalBackDrop'); // modal dark bg
+const modalWithRewardOptions = document.querySelector('.innerBackProjectModal'); // actual modal 
+const hamburger = document.querySelector('.hamburger'); // hamburger icon
+let backProjectButton = document.querySelector('.backProject-Btn'); // button to display rewards
+let rewardButtons = document.querySelectorAll('.rewardButton'); // 'select reward' buttons
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -5,11 +10,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (windowSizeX > 768) {
         hamburger.style.display = 'none';
     }
+    displayModal()
 
 });
 
 
-let hamburger = document.querySelector('.hamburger');
 
 hamburger.addEventListener('click', () => {
     let closeIcon = document.querySelector('.close');
@@ -94,15 +99,10 @@ const bookmarkProject = () => {
 }
 
 
-function displayModal() {
+function displayModal(button) {
  
-    let backProjectButton = document.querySelector('.backProject-Btn'); // button to display rewards
-    let modalDarkBackground = document.querySelector('.modalBackDrop'); // modal dark bg
-    let modalWithRewardOptions = document.querySelector('.innerBackProjectModal'); // actual modal 
     let closeModalButton = document.querySelector('.modal-closeIcon'); // closing icon button
-
-
-    backProjectButton.addEventListener('click', () => { 
+    button.addEventListener('click', () => { 
         modalWithRewardOptions.style.display = 'inline';
         modalDarkBackground.style.display = 'inline';
 
@@ -122,24 +122,17 @@ function displayModal() {
         rewardFocus();
 
     })
-    
-  
+
 
 }
 
 
-function selectReward() {
-    let rewardButtons = document.querySelectorAll('.rewardButton');
+    rewardButtons.forEach(btn => {
+        btn.addEventListener('click', displayModal(rewardButtons));
+    });
 
-    Array.from(rewardButtons).forEach((btn, i) => {
-        rewardButtons.addEventListener('click', () => {
-            console.log(btn, i);
-        })
-    })
-}
 
-selectReward();
-displayModal();
+displayModal(backProjectButton);
 bookmarkProject();
 
 
