@@ -1,8 +1,8 @@
 const modalDarkBackground = document.querySelector('.modalBackDrop'); // modal dark bg
 const modalWithRewardOptions = document.querySelector('.innerBackProjectModal'); // actual modal 
 const hamburger = document.querySelector('.hamburger'); // hamburger icon
-let backProjectButton = document.querySelector('.backProject-Btn'); // button to display rewards
-let rewardButtons = document.querySelectorAll('.rewardButton'); // 'select reward' buttons
+const backProjectButton = document.querySelector('.backProject-Btn'); // button to display rewards
+const rewardButtons = document.querySelectorAll('.rewardButton'); // 'select reward' buttons
 
 document.addEventListener('DOMContentLoaded', () => {
 
