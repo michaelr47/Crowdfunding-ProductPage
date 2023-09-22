@@ -3,7 +3,7 @@ const modalWithRewardOptions = document.querySelector('.innerBackProjectModal');
 const hamburger = document.querySelector('.hamburger'); // hamburger icon
 const backProjectButton = document.querySelector('.backProject-Btn'); // button to display rewards
 const rewardButtons = Array.from(document.querySelectorAll('.rewardButton')); // 'select reward' buttons
-
+const buttonsForModal = [backProjectButton, rewardButtons[0], rewardButtons[1]] // buttons for modal display
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -100,41 +100,36 @@ const bookmarkProject = () => {
 }
 
 
-function displayModal(button) {
+function displayModal() {
 
     let closeModalButton = document.querySelector('.modal-closeIcon'); // closing icon button
+    
+    buttonsForModal.forEach(button => {
+        button.addEventListener('click', () => { 
+            modalWithRewardOptions.style.display = 'inline';
+            modalDarkBackground.style.display = 'inline';
 
-    button.addEventListener('click', () => { 
-        modalWithRewardOptions.style.display = 'inline';
-        modalDarkBackground.style.display = 'inline';
-
-        if (modalDarkBackground && modalWithRewardOptions) { // explicit check if both elements are present
-            modalDarkBackground.addEventListener('click', () => {
-                modalDarkBackground.style.display = 'none';
-                modalWithRewardOptions.style.display = 'none';
-            })
+            if (modalDarkBackground && modalWithRewardOptions) { // explicit check if both elements are present
+                modalDarkBackground.addEventListener('click', () => {
+                    modalDarkBackground.style.display = 'none';
+                    modalWithRewardOptions.style.display = 'none';
+                })
 
 
-            closeModalButton.addEventListener('click', () => {
-                modalDarkBackground.style.display = 'none';
-                modalWithRewardOptions.style.display = 'none';
-            })
-        }
+                closeModalButton.addEventListener('click', () => {
+                    modalDarkBackground.style.display = 'none';
+                    modalWithRewardOptions.style.display = 'none';
+                })
+            }
 
-        rewardFocus();
+            rewardFocus();
 
+        })
     })
-
 
 }
 
 
-    rewardButtons.forEach(btn => {
-        btn.addEventListener('click', displayModal(btn));
-    });
-
-
-displayModal(backProjectButton);
 bookmarkProject();
 
 
