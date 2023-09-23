@@ -369,7 +369,19 @@ input[type="radio"] {
     font-weight: 700;
 }
 
-/* .inputAmount::before */
+.rewardLabel {
+    position: relative;
+}
+
+.rewardLabel::before {
+    content: '$';
+    color:darkgray;
+    position: absolute;
+    top: 1px;
+    left:0;
+    margin-left: 2rem;
+    
+}
 
 .continueBtn {
     border: none;
