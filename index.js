@@ -63,9 +63,7 @@ const rewardFocus = () => {
     let radios = document.querySelectorAll('input[type="radio"]');
     // selected reward options
     let selectedReward = document.querySelectorAll('.rewardSelected');
-    console.log(selectedReward[0]);
-    console.log(selectedReward[1]);
-
+    
     // loop over radios 
     for (let i = 0; i < radios.length - 1; i++) { 
         //adding click event to all 
