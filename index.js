@@ -63,7 +63,8 @@ const rewardFocus = () => {
     let radios = document.querySelectorAll('input[type="radio"]');
     // selected reward options
     let selectedReward = document.querySelectorAll('.rewardSelected');
-    
+    console.log(selectedReward[0]);
+    console.log(selectedReward[1]);
 
     // loop over radios 
     for (let i = 0; i < radios.length - 1; i++) { 
@@ -72,10 +73,14 @@ const rewardFocus = () => {
             // loop over reward containers to remove focus state
             for (let j = 0; j < rewards.length - 1; j++) {
                 rewards[j].classList.remove('rewardFocus');
+                for (let k = 0; k < selectedReward.length; k++) {
+                    selectedReward[k].classList.add('hidden')
+                }
             }
             // if checked, then add focus state to corresponding reward container
             if (radios[i].checked) {
                 rewards[i].classList.add('rewardFocus');
+                selectedReward[i-1].classList.remove('hidden');
             }
         })
     }
