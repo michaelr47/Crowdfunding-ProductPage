@@ -290,8 +290,8 @@ nav {
     cursor: pointer;
 }
 
-.rewardFocus {
-    border: 1.5px solid darkcyan;
+.rewardFocus, .inputAmount:focus {
+    border: 1.5px solid var(--moderateCyan);
 }
 
 .disabled {
