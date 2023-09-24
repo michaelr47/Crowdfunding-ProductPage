@@ -360,8 +360,8 @@ input[type="radio"] {
 
 .inputAmount {
     border: 1px solid #bfbfbf;
-    height: 40px;
-    width: 90px;
+    height: 50px;
+    width: 100px;
     border-radius: 50px;
     margin: 10px;
     outline: none;
@@ -386,7 +386,7 @@ input[type="radio"] {
 .continueBtn {
     border: none;
     border-radius: 50px;
-    height: 40px;
+    height: 50px;
     width: 100px;
     background-color: var(--moderateCyan);
     color: white;
