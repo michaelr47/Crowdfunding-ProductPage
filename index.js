@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-
 hamburger.addEventListener('click', () => {
     let closeIcon = document.querySelector('.close');
     let modalBackdrop = document.querySelector('.modalBackDrop');
@@ -93,15 +92,13 @@ const bookmarkProject = () => {
     let bookmarkedText = document.querySelector('.bookmarked'); // bookmarked
     let bookmarkImage = document.querySelector('.bookmark'); // bookmarkImg in div Container 
     
-
     bookmarkDiv.addEventListener('click', () => {
         bookmarkImage.classList.add('bookmark');
         bookmarkSpan.style.display = 'none';
         bookmarkedText.style.display = 'inline';
         bookmarkedText.classList.add('bookmarkSpan');
         bookmarkedText.style.color = 'darkcyan';
-
-
+        
     })
 }
 
