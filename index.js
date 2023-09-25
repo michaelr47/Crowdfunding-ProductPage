@@ -135,8 +135,25 @@ function displayModal() {
 
 bookmarkProject();
 
+function handleSubmit() {
+    const continueButton = Array.from(document.querySelectorAll('.continueBtn'));
+    const inputs = Array.from(document.querySelectorAll('.inputAmount'));
+    console.log(inputs);
+    continueButton.forEach(button => {
+        button.addEventListener('click', () => {
+            let firstInput = inputs[0];
+            let SecInput = inputs[1];
 
+            if (firstInput.value.length === 0) {
+                console.log('its blank')
+            } else {
+                console.log('!blank')
+            }
+        })
+    })
+}
 
+handleSubmit();
 // add click event listener on backproject btn
     // display modal with reward options
         // if radio.checked on either, add border and display input amount field
