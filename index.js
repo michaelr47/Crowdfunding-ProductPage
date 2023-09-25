@@ -3,7 +3,7 @@ const modalWithRewardOptions = document.querySelector('.innerBackProjectModal');
 const hamburger = document.querySelector('.hamburger'); // hamburger icon
 const backProjectButton = document.querySelector('.backProject-Btn'); // button to display rewards
 const rewardButtons = Array.from(document.querySelectorAll('.rewardButton')); // 'select reward' buttons
-const buttonsForModal = [backProjectButton, rewardButtons[0], rewardButtons[1]] // buttons for modal display
+const buttonsForModal = [backProjectButton, rewardButtons[0], rewardButtons[1]]; // buttons for modal display
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -11,10 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (windowSizeX > 768) {
         hamburger.style.display = 'none';
     }
-    displayModal()
+    displayModal();
 
 });
-
 
 
 hamburger.addEventListener('click', () => {
@@ -51,10 +50,9 @@ window.addEventListener('resize', () => {
         hamburger.style.display = 'none';
 
     } else {
-        hamburger.style.display = 'block'
+        hamburger.style.display = 'block';
     }
 });
-
 
 const rewardFocus = () => {
     // reward options INSIDE modal
@@ -63,7 +61,9 @@ const rewardFocus = () => {
     let radios = document.querySelectorAll('input[type="radio"]');
     // selected reward options
     let selectedReward = document.querySelectorAll('.rewardSelected');
-    
+    // pledge amount or more text 
+    let pledgeAmount = Array.from(document.querySelectorAll('.innerBackProjectModal .pledgeAmount'));
+
     // loop over radios 
     for (let i = 0; i < radios.length - 1; i++) { 
         //adding click event to all 
@@ -72,13 +72,16 @@ const rewardFocus = () => {
             for (let j = 0; j < rewards.length - 1; j++) {
                 rewards[j].classList.remove('rewardFocus');
                 for (let k = 0; k < selectedReward.length; k++) {
-                    selectedReward[k].classList.add('hidden')
+                    selectedReward[k].classList.add('hidden');
+                    pledgeAmount[k].style.fontWeight = '500';
                 }
             }
-            // if checked, then add focus state to corresponding reward container
+            // if checked, then add focus state to corresponding reward container, add hidden div & fontweight to pledge text
             if (radios[i].checked) {
                 rewards[i].classList.add('rewardFocus');
                 selectedReward[i-1].classList.remove('hidden');
+                pledgeAmount[i-1].style.fontWeight = '700';
+
             }
         })
     }
