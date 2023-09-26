@@ -138,19 +138,38 @@ bookmarkProject();
 function handleSubmit() {
     const continueButton = Array.from(document.querySelectorAll('.continueBtn'));
     const inputs = Array.from(document.querySelectorAll('.inputAmount'));
-    console.log(inputs);
+    const thankYouModal = document.querySelector('.thankYouModal');
+    const btnInTYModal = document.querySelector('.thankYou-btn');
     continueButton.forEach(button => {
         button.addEventListener('click', () => {
             let firstInput = inputs[0];
-            let SecInput = inputs[1];
+            let secInput = inputs[1];
 
             if (firstInput.value.length === 0) {
-                console.log('its blank')
+                return;
             } else {
-                console.log('!blank')
+                modalWithRewardOptions.style.display = 'none';
+                thankYouModal.classList.remove('hidden');
             }
+
+            if (secInput.value.length === 0) {
+                return;
+            } else {
+                modalWithRewardOptions.style.display = 'none';
+                thankYouModal.classList.remove('hidden');
+
+            }
+
+            
+
         })
     })
+
+    if (!thankYouModal.classList.contains('hidden')) {
+        btnInTYModal.addEventListener('click', () => {
+            thankYouModal.classList.add('hidden');
+        })
+    }
 }
 
 handleSubmit();
