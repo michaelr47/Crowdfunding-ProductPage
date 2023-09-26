@@ -179,17 +179,31 @@
       </p>
 
       <div class="rewards">
-        <div class="reward">
-          <div class="modal-reward-header" style="margin-bottom: 1rem;">
-            <input type="radio" name="reward" id="noReward" value="0">
-            <h4 class="modalHeading-title">
-              <label for="noReward">Pledge with no reward</label>
-            </h4>
+
+        <div class="reward noPad">
+          <div class="innerRewardModal">
+            <div class="modal-reward-header" style="margin-bottom: 1rem;">
+              <input type="radio" name="reward" id="noReward" value="0">
+              <h4 class="modalHeading-title">
+                <label for="noReward">Pledge with no reward</label>
+              </h4>
+            </div>
+            <br>
+            <p class="rewardDescription">
+            Choose to support us without a reward if you simply believe in our project. As a backer, 
+            you will be signed up to receive product updates via email.
+            </p>
           </div>
-          <p class="rewardDescription">
-          Choose to support us without a reward if you simply believe in our project. As a backer, 
-          you will be signed up to receive product updates via email.
-          </p>
+          
+          <div class="rewardSelected hidden noPad">
+            <!-- <p class="rewardSelected-Enter">Enter your Pledge</p> -->
+            <!-- <div> -->
+              <!-- <label class="rewardLabel">
+                <input type="text" class="inputAmount">
+              </label> -->
+              <button class="continueBtn" id="noRewardButton">Continue</button>
+            <!-- </div> -->
+          </div>
         </div>
 
         <div class="reward noPad">
