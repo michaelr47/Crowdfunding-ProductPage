@@ -143,7 +143,14 @@ function handleSubmit() {
     const thankYouModal = document.querySelector('.thankYouModal');
     const btnInTYModal = document.querySelector('.thankYou-btn');
   
-    console.log(continueButtons[0]);
+    let noRewardBtn = document.getElementById('noRewardButton');
+    console.log(noRewardBtn);
+
+    noRewardBtn.addEventListener('click', () => {
+        modalWithRewardOptions.style.display = 'none';
+        thankYouModal.classList.remove('hidden');
+    })
+
     continueButtons.forEach((button, i) => {
         button.addEventListener('click', () => {
 
@@ -151,28 +158,12 @@ function handleSubmit() {
             let firstInput = inputs[0];
             let secInput = inputs[1];
 
-            if (firstInput.value.length === 0) {
+            if (firstInput.value.length === 0 || secInput.value.length === 0) {
                 return;
             } else {
                 modalWithRewardOptions.style.display = 'none';
                 thankYouModal.classList.remove('hidden');
             }
-
-            if (secInput.value.length === 0) {
-                return;
-            } else {
-                modalWithRewardOptions.style.display = 'none';
-                thankYouModal.classList.remove('hidden');
-
-            }
-            // FIX //////////
-            if (rewardOptions[0].classList.contains('rewardFocus')) {
-                button[0].addEventListener('click', () => {
-                    modalWithRewardOptions.style.display = 'none';
-                    thankYouModal.classList.remove('hidden');
-                })
-            }
-            
 
         })
     })
