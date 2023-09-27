@@ -7,7 +7,10 @@ const rewardOptions = document.querySelectorAll('.innerBackProjectModal .reward'
 const backProjectButton = document.querySelector('.backProject-Btn'); // button to display rewards
 const rewardButtons = Array.from(document.querySelectorAll('.rewardButton')); // 'select reward' buttons
 const buttonsForModal = [backProjectButton, rewardButtons[0], rewardButtons[1]]; // buttons for modal display
-
+// thank you modal 
+const thankYouModal = document.querySelector('.thankYouModal');
+// 'got it' btn in thank you modal
+const btnInTYModal = document.querySelector('.thankYou-btn');
 document.addEventListener('DOMContentLoaded', () => {
 
     let windowSizeX = window.innerWidth;
@@ -120,6 +123,13 @@ function displayModal() {
                     modalWithRewardOptions.style.display = 'none';
                 })
 
+                if (modalDarkBackground && thankYouModal) {
+                    modalDarkBackground.addEventListener('click', () => {
+                        modalDarkBackground.style.display = 'none';
+                        thankYouModal.classList.add('hidden');
+                    })
+
+                }
 
                 closeModalButton.addEventListener('click', () => {
                     modalDarkBackground.style.display = 'none';
@@ -140,12 +150,11 @@ bookmarkProject();
 function handleSubmit() {
     const continueButtons = Array.from(document.querySelectorAll('.continueBtn'));
     const inputs = Array.from(document.querySelectorAll('.inputAmount'));
-    const thankYouModal = document.querySelector('.thankYouModal');
-    const btnInTYModal = document.querySelector('.thankYou-btn');
-  
-    let noRewardBtn = document.getElementById('noRewardButton');
-    console.log(noRewardBtn);
 
+   
+    // no reward button / first button in reward options
+    const noRewardBtn = document.getElementById('noRewardButton');
+   
     noRewardBtn.addEventListener('click', () => {
         modalWithRewardOptions.style.display = 'none';
         thankYouModal.classList.remove('hidden');
@@ -158,13 +167,15 @@ function handleSubmit() {
             let firstInput = inputs[0];
             let secInput = inputs[1];
 
-            if (firstInput.value.length === 0 || secInput.value.length === 0) {
+            if (firstInput.value.length === 0) {
+                return;
+            } 
+            if (secInput.value.length === 0) {
                 return;
             } else {
                 modalWithRewardOptions.style.display = 'none';
                 thankYouModal.classList.remove('hidden');
             }
-
         })
     })
 
