@@ -187,6 +187,27 @@ function handleSubmit() {
     }
 }
 
+function selectRewardFocus() {
+    let firstRadio = document.querySelectorAll('input[type="radio"]')[1];
+    let secRadio = document.querySelectorAll('input[type="radio"]')[2];
+   
+
+    rewardButtons.forEach((button, i) => {
+        console.log(button[i]);
+        if (button && i === 1) {
+            let firstChecked = firstRadio.checked;
+            rewardFocus();
+            return firstChecked;
+        } 
+        if (button && i === 2) {
+            let secChecked = secRadio.checked;
+            rewardFocus();
+            return secChecked;
+        }
+    })
+}
+
+selectRewardFocus()
 handleSubmit();
 
 // add click event listener on backproject btn ✅
