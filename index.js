@@ -137,7 +137,7 @@ function displayModal() {
                 })
             }
 
-            rewardFocus();
+            // rewardFocus();
 
         })
     })
@@ -191,20 +191,22 @@ function selectRewardFocus() {
     let firstRadio = document.querySelectorAll('input[type="radio"]')[1];
     let secRadio = document.querySelectorAll('input[type="radio"]')[2];
    
+    for (let i = 0; i < rewardButtons.length - 1; i++) {
+        rewardButtons[i].addEventListener('click', () => {
+            if (rewardButtons && i === 0) {
+                rewardFocus()
+                firstRadio.checked = true;
+                rewardOptions[1].classList.add('rewardFocus')
+            }
 
-    rewardButtons.forEach((button, i) => {
-        console.log(button[i]);
-        if (button && i === 1) {
-            let firstChecked = firstRadio.checked;
-            rewardFocus();
-            return firstChecked;
-        } 
-        if (button && i === 2) {
-            let secChecked = secRadio.checked;
-            rewardFocus();
-            return secChecked;
-        }
-    })
+            if (rewardButtons && i === 1) {
+                rewardFocus()
+                secRadio.checked = true;
+                rewardOptions[2].classList.add('rewardFocus');
+            }
+
+        })
+    }
 }
 
 selectRewardFocus()
