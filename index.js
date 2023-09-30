@@ -95,12 +95,18 @@ const bookmarkProject = () => {
     let bookmarkDiv = document.querySelector('.tabAndDeskBookmark'); // div
     let bookmarkSpan = document.querySelector('.bookmarkSpan'); // bookmark
     let bookmarkedText = document.querySelector('.bookmarked'); // bookmarked
-    let bookmarkImage = document.querySelector('.bookmark'); // bookmarkImg in div Container 
+    let bookmarks = document.querySelectorAll('.bookmark'); // bookmarkImg in div Container 
     
+    for (const bookmark of bookmarks) {
+        bookmark.classList.remove('bookmark');
+    }
+    // bookmark div is the wrapper
     bookmarkDiv.addEventListener('click', () => {
-        bookmarkImage.classList.add('bookmark');
+    
+       for (const bookmarked of bookmarks) {
+            bookmarked.classList.add('bookmark');
+       }
         bookmarkSpan.style.display = 'none';
-        bookmarkedText.style.display = 'inline';
         bookmarkedText.classList.add('bookmarkSpan');
         bookmarkedText.style.color = 'darkcyan';
         

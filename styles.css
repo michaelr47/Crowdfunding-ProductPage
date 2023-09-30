@@ -512,7 +512,7 @@ input[type="radio"] {
         cursor: pointer;
      }
      .tabAndDeskBookmark:active {opacity: .7;}
-    .bookmarkSpan { padding: 0px 20px; font-weight: 700; color: var(--darkGray); }
+    .bookmarkSpan { padding: 0px 20px; font-weight: 700; color: var(--darkGray); display: inline;}
     .bookmarkImg { display: none; }
     .product-name { font-size: 1.75rem; }
     .innerAboutProject { padding: 2rem; }
