@@ -137,7 +137,7 @@ function displayModal() {
                 })
             }
 
-            // rewardFocus();
+            rewardFocus();
 
         })
     })
@@ -190,21 +190,25 @@ function handleSubmit() {
 function selectRewardFocus() {
     let firstRadio = document.querySelectorAll('input[type="radio"]')[1];
     let secRadio = document.querySelectorAll('input[type="radio"]')[2];
-   
+    let selectedReward = document.querySelectorAll('.rewardSelected');
+//    index 0 and 1 only      btn len = 2
     for (let i = 0; i < rewardButtons.length - 1; i++) {
         rewardButtons[i].addEventListener('click', () => {
             if (rewardButtons && i === 0) {
-                rewardFocus()
+                displayModal()
                 firstRadio.checked = true;
                 rewardOptions[1].classList.add('rewardFocus')
+                selectedReward[1].classList.remove('hidden');
             }
 
             if (rewardButtons && i === 1) {
-                rewardFocus()
+                displayModal()
                 secRadio.checked = true;
                 rewardOptions[2].classList.add('rewardFocus');
+                selectedReward[2].classList.remove('hidden');
             }
-
+            rewardOptions[i].classList.remove('rewardFocus');
+            selectedReward[i].classList.add('hidden');
         })
     }
 }
