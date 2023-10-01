@@ -169,19 +169,26 @@ function handleSubmit() {
     continueButtons.forEach((button, i) => {
         button.addEventListener('click', () => {
 
-        
             let firstInput = inputs[0];
             let secInput = inputs[1];
 
-            if (firstInput.value.length === 0) {
+            console.log(`First input value is: ${firstInput}`);
+            console.log(`First input value is: ${secInput}`);
+
+            if (secInput.value.length === 0 && firstInput.value.length === 0) {
                 return;
             } 
-            if (secInput.value.length === 0) {
+            if (firstInput.value.length === 0 || parseInt(firstInput.value) < 25 ) {
                 return;
-            } else {
-                modalWithRewardOptions.style.display = 'none';
-                thankYouModal.classList.remove('hidden');
             }
+            if (secInput.value.length === 0 || parseInt(secInput.value) < 75) {
+                return;
+            }  
+            
+            
+        modalWithRewardOptions.style.display = 'none';
+        thankYouModal.classList.remove('hidden');
+            
         })
     })
 
