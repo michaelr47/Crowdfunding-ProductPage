@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     displayModal();
 
 });
-
+// hamurger icon to display nav menu
 hamburger.addEventListener('click', () => {
     let closeIcon = document.querySelector('.close');
     let modalBackdrop = document.querySelector('.modalBackDrop');
@@ -46,7 +46,7 @@ hamburger.addEventListener('click', () => {
         })
     });
 })
-
+// resize window to display or !display hamburger icon to its current window width - (px)
 window.addEventListener('resize', () => {
     let hamburger = document.querySelector('.hamburger');
     let windowSizeX = window.innerWidth;
@@ -57,8 +57,13 @@ window.addEventListener('resize', () => {
     } else {
         hamburger.style.display = 'block';
     }
+// removes dark background (modal) on or after 768px
+    if (modalDarkBackground && windowSizeX > 768) {
+        modalDarkBackground.style.display = 'none';
+    }
 });
 
+// adds border to selected reward option, form displays(input field with contineu button), and font weight bolder to 'pledge amount' text
 const rewardFocus = () => {
     
     // input radio buttons
@@ -90,7 +95,7 @@ const rewardFocus = () => {
         })
     }
 }
-
+// 'bookmark' to 'bookmarked' and changes icon color
 const bookmarkProject = () => {
     let bookmarkDiv = document.querySelector('.tabAndDeskBookmark'); // div
     let bookmarkSpan = document.querySelector('.bookmarkSpan'); // bookmark
@@ -113,7 +118,7 @@ const bookmarkProject = () => {
     })
 }
 
-
+// displays modal with reward options
 function displayModal() {
 
     let closeModalButton = document.querySelector('.modal-closeIcon'); // closing icon button
@@ -150,17 +155,15 @@ function displayModal() {
 
 }
 
-
-bookmarkProject();
-
 function handleSubmit() {
     const continueButtons = Array.from(document.querySelectorAll('.continueBtn'));
+    // input amount fields
     const inputs = Array.from(document.querySelectorAll('.inputAmount'));
 
    
     // no reward button / first button in reward options
     const noRewardBtn = document.getElementById('noRewardButton');
-   
+
     noRewardBtn.addEventListener('click', () => {
         modalWithRewardOptions.style.display = 'none';
         thankYouModal.classList.remove('hidden');
@@ -170,28 +173,17 @@ function handleSubmit() {
         button.addEventListener('click', () => {
 
             let firstInput = inputs[0];
-            let secInput = inputs[1];
+            let secInput = inputs[1];   
+            // if either one input field is filled out and meets req. , then displays thank you modal.
+            if ((firstInput.value.length !== 0 && parseInt(firstInput.value) >= 25) ||
+                (secInput.value.length !== 0 && parseInt(secInput.value) >= 75)) {
+                    modalWithRewardOptions.style.display = 'none';
+                    thankYouModal.classList.remove('hidden');
 
-            console.log(`First input value is: ${firstInput}`);
-            console.log(`First input value is: ${secInput}`);
-
-            if (secInput.value.length === 0 && firstInput.value.length === 0) {
-                return;
-            } 
-            if (firstInput.value.length === 0 || parseInt(firstInput.value) < 25 ) {
-                return;
-            }
-            if (secInput.value.length === 0 || parseInt(secInput.value) < 75) {
-                return;
-            }  
-            
-            
-        modalWithRewardOptions.style.display = 'none';
-        thankYouModal.classList.remove('hidden');
-            
+            } else return;      
         })
     })
-
+    // 'got it' click event
     if (thankYouModal.classList.contains('hidden')) {
             btnInTYModal.addEventListener('click', () => {
                 thankYouModal.classList.add('hidden');
@@ -199,7 +191,7 @@ function handleSubmit() {
             })
     }
 }
-
+// func to pre-select reward option with radio checked and form displayed below
 function selectRewardFocus() {
     let firstRadio = document.querySelectorAll('input[type="radio"]')[1];
     let secRadio = document.querySelectorAll('input[type="radio"]')[2];
@@ -226,6 +218,8 @@ function selectRewardFocus() {
     }
 }
 
+
+bookmarkProject();
 selectRewardFocus()
 handleSubmit();
 
@@ -234,7 +228,7 @@ handleSubmit();
         // if radio.checked on either, add border and display input amount field ✅
         // else diff. radio is checked, untoggle old, and add styles as before ^ ✅
 
-            // input validation as well for each one to meet the reward qualif. threshold... $ 
+            // input validation as well for each one to meet the reward qualif. threshold... $ ✅
 
-                // if all is met, after clicking contiue btn, add thank you modal
+                // if all is met, after clicking contiue btn, add thank you modal ✅
  

@@ -49,9 +49,7 @@ main {
     padding: 10px;
 }
 
-.headerLogoDiv {
-    z-index: 2;
-}
+.headerLogoDiv { z-index: 2; }
 .headerLogo {
     align-self: flex-start;
     width: 135px;
@@ -145,9 +143,7 @@ nav {
     font-size: 14px;
 
 }
-.product-name, .product-description, .backProject {
-    margin: 1.2rem;
-}
+.product-name, .product-description, .backProject { margin: 1.2rem; }
 
 .backProject {
     display: flex;
@@ -175,9 +171,7 @@ nav {
     background-color: var(--darkCyan);
 }
 
-.bookmarkImg:hover {
-    cursor: pointer;
-}
+.bookmarkImg:hover { cursor: pointer; }
 /* 'bookmarked' text */
 .bookmarked { display: none; }
 /* div wrapping boomark img and text */
@@ -232,9 +226,7 @@ nav {
     
 }
 
-.about-Title {
-    margin: 1rem 0px;
-}
+.about-Title { margin: 1rem 0px; }
 
 .about-Para{
     color: var(--darkGray);
@@ -290,9 +282,7 @@ nav {
     cursor: pointer;
 }
 
-.rewardFocus, .inputAmount:focus {
-    border: 1.5px solid var(--moderateCyan);
-}
+.rewardFocus, .inputAmount:focus { border: 1.5px solid var(--moderateCyan); }
 
 .disabled {
     opacity: .4;
@@ -324,7 +314,6 @@ nav {
 .modalHeading-title { margin-right: 10px; }
 .modalHeading-title:hover label { color: var(--moderateCyan); cursor: pointer;}
 .modal-closeIcon { cursor: pointer; }
-.modal-closeIcon path { fill: red; }
 .modal-supportMsg {
     margin-top: 1.5rem;
     padding: 0px 1rem;
@@ -369,9 +358,7 @@ input[type="radio"] {
     font-weight: 700;
 }
 
-.rewardLabel {
-    position: relative;
-}
+.rewardLabel { position: relative; }
 
 .rewardLabel::before {
     content: '$';
@@ -395,12 +382,10 @@ input[type="radio"] {
     cursor: pointer;
 }
 
-.outlineSelected {
-    border: 1.5px solid var(--darkCyan);
-}
+.outlineSelected { border: 1.5px solid var(--darkCyan); }
 
 .hidden {display: none !important;}
-.innerBackProjectModal .rewardStatus h2{ font-size: 18px; }
+.innerBackProjectModal .rewardStatus h2 { font-size: 18px; }
 .productLeft { display: none; }
 
 /* thank you modal */
@@ -440,26 +425,16 @@ input[type="radio"] {
     cursor: pointer;
 }
 
-.bookmark {
-    filter: invert(34%) sepia(74%) saturate(446%) hue-rotate(127deg) brightness(98%) contrast(94%);
- }
+.bookmark { filter: invert(34%) sepia(74%) saturate(446%) hue-rotate(127deg) brightness(98%) contrast(94%); }
  
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
 
 
-
 @media screen and (min-width: 450px) {
-    nav {
-        left: 26%;
-    }
-
+    nav { left: 26%; }
     .modal-reward-header { justify-content: flex-start; }
-
-    input[type="radio"] {
-        margin-right: 2rem;
-    }
-
+    input[type="radio"] { margin-right: 2rem; }
     .rowAndSpaceEvenly {
         width: 300px;
         display: flex;
@@ -467,7 +442,6 @@ input[type="radio"] {
         justify-content: space-evenly;
         align-items: center;
     }
-
 }
 
 @media screen and (min-width: 768px) {
@@ -497,11 +471,8 @@ input[type="radio"] {
 
     .nav-items { border-bottom: none; }
     .nav-items a {color: white; font-weight: normal; font-size: 14px;}
-    .innerBookmarkSection {
-        padding: 1.65rem;
-    }
+    .innerBookmarkSection { padding: 1.65rem; }
     .backProject { justify-content: space-between; } 
-
     .tabAndDeskBookmark {
         background-color: rgba(128, 128, 128, .1);
         width: 29%;
@@ -511,7 +482,7 @@ input[type="radio"] {
         align-items: center;
         cursor: pointer;
      }
-     .tabAndDeskBookmark:active {opacity: .7;}
+    .tabAndDeskBookmark:active { opacity: .7;}
     .bookmarkSpan { padding: 0px 20px; font-weight: 700; color: var(--darkGray); display: inline;}
     .bookmarkImg { display: none; }
     .product-name { font-size: 1.75rem; }
@@ -539,16 +510,9 @@ input[type="radio"] {
         border-right: 1px solid rgba(0,0,0,.2);
         
     }
-    .backedMoney, .totalBackers, .backedDaysLeft {
-        font-size: 2rem;
-    }
-    .backedMoneySpan, .totalBackersSpan, .backedDaysLeftSpan {
-        font-size: .950rem;
-    }
-
-    .innerRewardModal {
-        padding: 2rem 1.2rem;
-    }
+    .backedMoney, .totalBackers, .backedDaysLeft { font-size: 2rem; }
+    .backedMoneySpan, .totalBackersSpan, .backedDaysLeftSpan { font-size: .950rem; }
+    .innerRewardModal { padding: 2rem 1.2rem; }
     .rewardHeading {
         flex-direction: row;
         justify-content: space-between;
@@ -559,9 +523,7 @@ input[type="radio"] {
         justify-content: space-between;
         align-items: center;
     }
-    .rewardButton, #disabledBtn {
-        padding: 1rem 1.5rem;
-    }
+    .rewardButton, #disabledBtn { padding: 1rem 1.5rem; }
 
     .innerBackProjectModal, .thankYouModal {
         margin: auto;
@@ -573,19 +535,15 @@ input[type="radio"] {
         display: block;
     }
 
-    .innerBackProjectModal .rewardStatus { 
-        display: none; }
+    .innerBackProjectModal .rewardStatus { display: none; }
 
     .rewardSelected {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
-    .thankYouModal {
-        top: 10%;
-    }
+    .thankYouModal { top: 10%; }
 } 
-
 
 @keyframes fadeIn {
     0% {
