@@ -48,7 +48,7 @@ Users should be able to:
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- Vanill JS - no frameworks
+- Vanilla JS - no frameworks
 - Functional Programming 
 
 ### What I learned
@@ -74,7 +74,7 @@ window.addEventListener('resize', () => {
 ```
 ### Continued development
 
-This was the first ever real project that I implemented the mobile first design and onwards to tablet and desktop. I will say its was pretty hard styling the css design formobile first but gradually, I was getting into the rhythm of it and felt super easier than the other way around (Desktop to mobile). I will continue to implement mobile first designs 😀.
+This was the first ever real project that I implemented the mobile first design and onwards to tablet and desktop. I will say its was pretty hard styling the css design for mobile first but gradually, I was getting into the rhythm of it and felt super easier than the other way around (Desktop to mobile). I will continue to implement mobile first designs 😀.
 
 ### Useful resources
 
