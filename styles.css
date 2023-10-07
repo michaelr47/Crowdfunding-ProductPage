@@ -426,10 +426,6 @@ input[type="radio"] {
 }
 
 .bookmark { filter: invert(34%) sepia(74%) saturate(446%) hue-rotate(127deg) brightness(98%) contrast(94%); }
- 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
-
 
 @media screen and (min-width: 450px) {
     nav { left: 26%; }
